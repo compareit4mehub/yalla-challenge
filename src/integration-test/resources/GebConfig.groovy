@@ -11,7 +11,7 @@ environments {
 
     // run via “./gradlew -Dgeb.env=chromeHeadless iT”
     chromeHeadless {
-        driver = {
+        driver = {  
             ChromeOptions o = new ChromeOptions()
             o.addArguments('headless')
             new ChromeDriver(o)
