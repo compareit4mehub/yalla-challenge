@@ -22,7 +22,7 @@ This assignment is designed to test the following:
 - Java 1.8
 - Grails 4.0.0
 - Get the project running, you can get help from the grails website
-- (Recommendation) Install IntelliJ Community Edition
+- IntelliJ Community Edition (Optional, but recommended)
 
 ## Task Overview
 
