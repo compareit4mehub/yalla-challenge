@@ -38,7 +38,7 @@ Once submitted, the app should display:
 
 - The frontend should send the requested account name to the backend
 - The backend should check a local cache/database if we already have results for this account
-- If not, the backend will call the gituhb api <https://api.github.com/users/facebook>, and store the results in a local cache/database.
+- If not, the backend will call the gituhb api <https://api.github.com/users/user_name> (e.g. <https://api.github.com/users/facebook>), and store the results in a local cache/database.
 - The backend will return the results from the database to the frontend
 - The frontend will display the results accordingly
 
