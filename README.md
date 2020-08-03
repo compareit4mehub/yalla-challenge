@@ -5,7 +5,7 @@
 This assignment is designed to test the following:
 
 - Ability to learn something new
-- Ability to learn from documentation
+- Ability to read/understand documentation
 - Ability to see something through from start to finish
 - Front end skills
 - Back end skills
