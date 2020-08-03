@@ -1,4 +1,4 @@
-# yalla assignment
+# Full Stack Developer Assignment
 
 ## Focus Points
 
