@@ -25,7 +25,7 @@ This assignment is designed to test the following:
 
 ## Task Overview
 
-We need an input for the user to type in the name of a github account.
+We need a new page, with an input for the user to type in the name of a github account.
 Once submitted, the app should display:
 
 - The avatar image of the account
@@ -34,7 +34,7 @@ Once submitted, the app should display:
 - The github ID
 - The number of public repos owned by that account
 
-## Specifics
+## Expected Behaviour
 
 - The frontend should send the requested account name to the backend
 - The backend should check a local cache/database if we already have results for this account
