@@ -12,13 +12,14 @@ This assignment is designed to test the following:
 - Source Code Management
 - Common sense
 - Quality of work
+- URL structure
 
 ## Requirements
 
 - Git
 - Java 1.8
 - Grails 4.0.0
-- Clone https://github.com/compareit4mehub/yalla-challenge.git
+- Clone <https://github.com/compareit4mehub/yalla-challenge.git>
 - Get the project running, you can get help from the grails website
 - (Recommendation) Install IntelliJ Community Edition
 
@@ -43,6 +44,7 @@ Once submitted, the app should display:
 
 ## Instructions
 
-- Clone the repository mentioned
-- Create your new feature branch, when naming the branch, use the naming convention `yourfirstname-yourlastname`
+- Fork the repository mentioned
+- Create the new feature on your fork
 - Raise a pull request once done
+- IMPORTANT - For the PR, use the naming convention `yourfirstname-yourlastname`
