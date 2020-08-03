@@ -15,7 +15,7 @@ environments {
             ChromeOptions o = new ChromeOptions()
             o.addArguments('headless')
             new ChromeDriver(o)
-        }
+        }      
     }
 
     // run via “./gradlew -Dgeb.env=firefox iT”
