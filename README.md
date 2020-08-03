@@ -21,7 +21,6 @@ This assignment is designed to test the following:
 - Git
 - Java 1.8
 - Grails 4.0.0
-- Fork <https://github.com/compareit4mehub/yalla-challenge.git>
 - Get the project running, you can get help from the grails website
 - (Recommendation) Install IntelliJ Community Edition
 
@@ -46,7 +45,8 @@ Once submitted, the app should display:
 
 ## Instructions
 
-- Fork the repository mentioned
+- Read up quickly on the basics of  the grails framework and groovy language
+- Fork this repository
 - Create the new feature on your fork
 - Raise a pull request once done
 - IMPORTANT - For the PR, use the naming convention `yourfirstname-yourlastname`
