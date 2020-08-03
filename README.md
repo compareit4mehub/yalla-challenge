@@ -12,6 +12,8 @@ This assignment is designed to test the following:
 - Source Code Management
 - Common sense
 - Quality of work
+- Code style
+- Understanding of code separation of concerns
 - URL structure
 
 ## Requirements
