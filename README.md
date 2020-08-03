@@ -19,7 +19,7 @@ This assignment is designed to test the following:
 - Git
 - Java 1.8
 - Grails 4.0.0
-- Clone <https://github.com/compareit4mehub/yalla-challenge.git>
+- Fork <https://github.com/compareit4mehub/yalla-challenge.git>
 - Get the project running, you can get help from the grails website
 - (Recommendation) Install IntelliJ Community Edition
 
