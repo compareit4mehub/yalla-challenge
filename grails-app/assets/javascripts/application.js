@@ -9,3 +9,31 @@
 //= require bootstrap
 //= require popper.min
 //= require_self
+function searchUserName(){
+    var URL="/gituser/getuser"
+    $.ajax({
+        url:URL,
+        type: 'POST',
+        data: {name:$("#name").val()},
+        success: function(resp){
+            if(resp != null && resp.id != null){
+                $("#location-label").val(resp.location)
+                $("#bio-label").val(resp.bio)
+                $("#publicrepo-label").val(resp.publicRepo)
+                $("#avatar-image").attr("src", resp.avatarImage);
+                $("#id-label").val(resp.id)
+            }else{
+                $("#location-label").val(null)
+                $("#bio-label").val(null)
+                $("#publicrepo-label").val(null)
+                $("#avatar-image").attr("src", "");
+                $("#id-label").val(null)
+                alert("Account not available")
+            }
+
+        },
+        error: function (err){
+            //console.log(error)
+        }
+    });
+}
