@@ -2,22 +2,27 @@ package yalla.assignment
 
 import groovy.json.JsonSlurper
 
+import javax.transaction.Transactional
+
 class GituserService implements GituserServiceInterface {
     @Override
     def searchUserName(String userName) {
         Gituser user = null
         try{
-            def resultMap = getUserFromAPI(userName)
-            if(resultMap != null){
-                user = new Gituser()
-                user.setName(resultMap["login"])
-                user.setLocation(resultMap["location"])
-                user.setAvatarImage(resultMap["avatar_url"])
-                user.setBio(resultMap["bio"])
-                user.setPublicRepo(resultMap["public_repos"])
-                user.setId(resultMap["id"])
-            }else{
-                return new Gituser()
+            user = Gituser.findByName(userName)
+            if(user == null){
+                def resultMap = getUserFromAPI(userName)
+                if(resultMap != null){
+                    user = new Gituser()
+                    user.setName(resultMap["login"])
+                    user.setLocation(resultMap["location"])
+                    user.setAvatarImage(resultMap["avatar_url"])
+                    user.setBio(resultMap["bio"])
+                    user.setPublicRepo(resultMap["public_repos"])
+                    user.setId(resultMap["id"])
+                }else{
+                    return new Gituser()
+                }
             }
 
         }catch(Exception e){
@@ -25,6 +30,14 @@ class GituserService implements GituserServiceInterface {
             connection.disconnect()
         }
 
+        return user
+    }
+
+    @Override
+    @Transactional
+    def createTestUser() {
+        Gituser user = new Gituser(id: 2345,name: "Test",bio: "aaa",location: "Delhi",avatarImage: "https://avatars3.githubusercontent.com/u/516448?v=4",publicRepo: 3)
+        user = user.save()
         return user
     }
 

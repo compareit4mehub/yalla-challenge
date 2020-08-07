@@ -22,6 +22,12 @@
                 <li class="controller">
                     <g:link controller="gituser" action="search">Search Github Users</g:link>
                 </li>
+                <li class="controller">
+                    <g:link controller="gituser" action="create">Create Sample Github User</g:link>
+                </li>
+                <g:if test="${flash.message}">
+                    <div class="message" role="status">${flash.message}</div>
+                </g:if>
 
             </ul>
         </div>

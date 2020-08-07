@@ -17,4 +17,9 @@ class GituserController {
         def user = gituserService.searchUserName(gituser.getName())
         render user as JSON
     }
+    def create(){
+        Gituser user = gituserService.createTestUser();
+        flash.message = "Created a Test user with name : "+user.getName()
+        respond user, view: "/index"
+    }
 }
