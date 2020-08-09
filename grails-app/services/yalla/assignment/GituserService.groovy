@@ -26,8 +26,7 @@ class GituserService implements GituserServiceInterface {
             }
 
         }catch(Exception e){
-            e.printStackTrace()
-            connection.disconnect()
+
         }
 
         return user
@@ -36,7 +35,7 @@ class GituserService implements GituserServiceInterface {
     @Override
     @Transactional
     def createTestUser() {
-        Gituser user = new Gituser(id: 2345,name: "Test",bio: "aaa",location: "Delhi",avatarImage: "https://avatars3.githubusercontent.com/u/516448?v=4",publicRepo: 3)
+        Gituser user = new Gituser(id: 2345,name: "Test"+(Integer)(Math.random()*1000),bio: "aaa",location: "Delhi",avatarImage: "https://avatars3.githubusercontent.com/u/516448?v=4",publicRepo: 3)
         user = user.save()
         return user
     }
@@ -51,7 +50,6 @@ class GituserService implements GituserServiceInterface {
             if(result != null){
                 result = result.text
             }
-            println connection.responseCode + ": " + result
             connection.disconnect()
 
             def slurper = new JsonSlurper()

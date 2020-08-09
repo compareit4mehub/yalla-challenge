@@ -3,6 +3,7 @@ package yalla.assignment
 class Gituser {
 
     static constraints = {
+        name(nullable: false,maxSize: 25)
     }
 
     String location
