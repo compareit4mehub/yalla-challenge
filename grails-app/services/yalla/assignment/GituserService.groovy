@@ -26,7 +26,7 @@ class GituserService implements GituserServiceInterface {
             }
 
         }catch(Exception e){
-
+          log.error "Error : ${e.getMessage()}",e
         }
 
         return user
@@ -56,6 +56,7 @@ class GituserService implements GituserServiceInterface {
             resultMap = slurper.parseText(result)
         }catch(Exception e){
             connection.disconnect()
+            log.error "Error : ${e.getMessage()}",e
         }
         return resultMap
     }
