@@ -2,7 +2,6 @@ package yalla.assignment
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
-
 import groovy.transform.CompileStatic
 
 @CompileStatic
