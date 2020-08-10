@@ -1,20 +1,19 @@
 package yalla.assignment
 
-import java.util.concurrent.ConcurrentHashMap
+import grails.gorm.transactions.Transactional
 
+@Transactional
 class UserService {
 
     def serviceMethod() {
 
     }
 
-    def userCache = new ConcurrentHashMap()
-
     def save(user){
-        userCache.put(user.userName,user)
+        user.save(flush:true)
     }
 
     def findByUserName(userName){
-        userCache.get(userName)
+        User.findByUserName(userName)
     }
 }

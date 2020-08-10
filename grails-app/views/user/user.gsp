@@ -27,15 +27,15 @@
 </div>
 <div class="col-sm-4 col-md-4" style="padding-left:80px">
   <label class="col-form-label font-weight-bold">Location: </label>
-  <span readonly="true">${user.location == null? "NA" : user.location}</span>
+  <span readonly="true">${user.location}</span>
 </div>
 <div class="col-sm-12 col-md-12">
   <label class="col-form-label font-weight-bold col-sm-1" style="padding-left:65px">Bio:</label>
-  <g:textArea class="col-sm-5" name="bio" readonly="true" value="${user.bio == null ? "NA": user.bio}" rows="3"/>
+  <g:textArea class="col-sm-5" name="bio" readonly="true" value="${user.bio}" rows="3"/>
 </div>
 <div class="col-sm-4 col-md-4" style="padding-left:80px">
   <label class="col-form-label font-weight-bold">Number of public repos:</label>
-  <span readonly="true">${user.public_repos == null? "NA" : user.public_repos}
+  <span readonly="true">${user.public_repos}
 </div>
 </body>
 </html>

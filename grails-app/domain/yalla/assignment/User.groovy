@@ -8,4 +8,17 @@ class User {
     String bio
     String gitHubId
     String public_repos
+
+    static constraints = {
+        userName nullable: false, blank:false
+        avatar_image_url nullable: true
+        location nullable: true
+        bio nullable: true
+        gitHubId nullable: false, blank: false
+        public_repos nullable: true
+    }
+
+    String toString(){
+        userName
+    }
 }
