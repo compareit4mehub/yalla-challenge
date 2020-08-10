@@ -15,11 +15,19 @@ class UserService {
         User.get(id)
     }
 
+    def list(){
+        User.list()
+    }
+
     def save(user){
         user.save(flush:true)
     }
 
     def getByUserName(userName){
         User.findByUserName(userName)
+    }
+
+    def delete(id){
+        Student.get(id).delete()
     }
 }

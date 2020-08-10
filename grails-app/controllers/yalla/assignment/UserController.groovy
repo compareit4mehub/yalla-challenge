@@ -1,5 +1,7 @@
 package yalla.assignment
 import grails.converters.JSON
+import groovy.json.JsonOutput
+
 class UserController {
     /**
      * This controller is responsible for handling requests
@@ -16,21 +18,25 @@ class UserController {
         def user = userService.getByUserName(params.userName)
 
         if (user.is(null)){
-            def get = new URL("https://api.github.com/users/${params.userName}").openConnection()
-            if(get.getResponseCode() == 200) {
-                def jsonObj = JSON.parse(get.getInputStream().getText())
-                user = new User(userName:jsonObj.login
-                        ,userImg: jsonObj.avatar_url
-                        ,location:jsonObj.location
-                        ,bio:jsonObj.bio
-                        ,gitHubId:jsonObj.id
-                        ,public_repos:jsonObj.public_repos)
+            def userInfo = new URL("https://api.github.com/users/${params.userName}").openConnection()
+            if(userInfo.getResponseCode() == 200) {
+                def userJson = JSON.parse(userInfo.getInputStream().getText())
+                user = new User(userName:userJson.login
+                        ,userImg: userJson.avatar_url
+                        ,location:userJson.location
+                        ,bio:userJson.bio
+                        ,gitHubId:userJson.id
+                        ,public_repos:userJson.public_repos)
                 userService.save(user)
 
                 render (view: "user", model: [user: user])
             }
             else{
-                render "User doesn't exist"
+                def errorText = '{\n' +
+                        '       "status": "error",\n' +
+                        '       "details": "User doesn\'t exist"\n' +
+                        '    }'
+                render(text: errorText, contentType: "application/json", encoding: "UTF-8")
             }
         }
         else{
