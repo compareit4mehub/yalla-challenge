@@ -8,39 +8,52 @@ class UserController {
      * and delegates it to the view.
      *
      * index() actions are been mapped to the URI /user/index and /user/index/form
+     *
+     *
+     * According to the instructions given the
+     * controller has to invoke to retrieve results is https://api.github.com/users/{user_name}
      * */
     def userService
 
     def index() { }
 
     def search() {
+        try{
+            def user = userService.getByUserName(params.userName)
 
-        def user = userService.getByUserName(params.userName)
+            if (user.is(null)){
+                def userInfo = new URL("https://api.github.com/users/${params.userName}").openConnection()
+                if(userInfo.getResponseCode() == 200) {
+                    def userJson = JSON.parse(userInfo.getInputStream().getText())
+                    user = new User(userName:userJson.login
+                            ,userImg: userJson.avatar_url
+                            ,location:userJson.location
+                            ,bio:userJson.bio
+                            ,gitHubId:userJson.id
+                            ,public_repos:userJson.public_repos)
+                    userService.save(user)
 
-        if (user.is(null)){
-            def userInfo = new URL("https://api.github.com/users/${params.userName}").openConnection()
-            if(userInfo.getResponseCode() == 200) {
-                def userJson = JSON.parse(userInfo.getInputStream().getText())
-                user = new User(userName:userJson.login
-                        ,userImg: userJson.avatar_url
-                        ,location:userJson.location
-                        ,bio:userJson.bio
-                        ,gitHubId:userJson.id
-                        ,public_repos:userJson.public_repos)
-                userService.save(user)
-
-                render (view: "user", model: [user: user])
+                    render (view: "user", model: [user: user])
+                }
+                else{
+                    def errorText = '{\n' +
+                            '       "status": "error",\n' +
+                            '       "details": "User doesn\'t exist"\n' +
+                            '    }'
+                    render(text: errorText, contentType: "application/json", encoding: "UTF-8")
+                }
             }
             else{
-                def errorText = '{\n' +
-                        '       "status": "error",\n' +
-                        '       "details": "User doesn\'t exist"\n' +
-                        '    }'
-                render(text: errorText, contentType: "application/json", encoding: "UTF-8")
+                render (view: "user", model: [user: user])
             }
+        }catch(Exception e){
+            println(e.getStackTrace())
+            def errorText = '{\n' +
+                    '       "status": "error",\n' +
+                    '       "details": '+ e.getMessage() +'\n'+
+                    '    }'
+            render(text: errorText, contentType: "application/json", encoding: "UTF-8")
         }
-        else{
-            render (view: "user", model: [user: user])
-        }
+
     }
 }
