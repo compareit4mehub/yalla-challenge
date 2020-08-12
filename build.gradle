@@ -71,6 +71,7 @@ dependencies {
     testCompile "org.seleniumhq.selenium:selenium-support:3.14.0"
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:3.14.0"
     testRuntime "org.seleniumhq.selenium:selenium-firefox-driver:3.14.0"
+    // compile "org.codehaus.groovy.modules.http-builder:http-builder:0.7"
 }
 
 bootRun {
@@ -100,4 +101,5 @@ tasks.withType(Test) {
 assets {
     minifyJs = true
     minifyCss = true
+    includes = ["fonts/*"]
 }

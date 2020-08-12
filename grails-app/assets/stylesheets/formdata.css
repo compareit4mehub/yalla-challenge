@@ -1,0 +1,50 @@
+.readonly-button {
+    background-color: #EEE;
+    margin-right: 10%;
+    width: 10%;
+}
+
+#gituser-results {
+    text-align: center;
+}
+
+#gituser-results > ul > label {
+    width: 5%;
+    text-align: left;
+}
+
+#gituser-results > ul {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    /* margin-left: 6%; */
+}
+
+#biobox {
+    width: 30%;
+    /* height: 10%; */
+    margin-left: 6%;
+}
+
+#gituser-form {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#imgresult {
+    width: 10%;
+    height: auto;
+    background: #000;
+}
+
+.error-box {
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #BB7777;
+    background: #FFAAAA;
+    /* padding: 50px;  */
+    width: 50%;
+    height: 100px;
+    line-height: 100px;
+}

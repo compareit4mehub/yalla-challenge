@@ -3,6 +3,23 @@ html, code, kbd, pre, samp {
     -webkit-text-size-adjust: 100%;
 }
 
+@font-face {
+    font-family: "Abrade";
+    src: url("FontsFree-Net-Abrade-1.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("FontsFree-Net-Abrade-1.woff") format("woff"), /* Modern Browsers */
+      url("FontsFree-Net-Abrade-1.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+path {
+    fill: none;
+    stroke: #646464;
+    stroke-width: 1px;
+    stroke-dasharray: 2,2;
+    stroke-linejoin: round;
+}
+
 html, body {
     height: 100%;
     -webkit-overflow-scrolling: touch;
@@ -44,7 +61,7 @@ pre {
 
 }
 .navbar-dark, .navbar-static-top {
-    background-color: #424649;
+    background-color: #e84c9b;
     border: 0px;
 }
 a.navbar-brand {
@@ -59,7 +76,7 @@ a.navbar-brand {
     color: white !important;
 }
 .navbar-nav>li>a:hover {
-    background-color: #2559a7 !important;
+    background-color: #2166b1 !important;
     color: white !important;
 }
 .navbar-nav>li>a {
@@ -69,7 +86,7 @@ a.navbar-brand {
     background-color: white;
 }
 .navbar-dark .navbar-toggle:hover, .navbar-dark .navbar-toggle:focus {
-    background-color: #2559a7;
+    background-color: #2166b1;
 }
 
 .navbar-toggler {
@@ -131,7 +148,7 @@ a.navbar-brand {
 
 #band {
     /*grey =#808080*/
-    background: #2559a7  no-repeat 50% 30%;
+    background: #2166b1  no-repeat 50% 30%;
     height: 400px;
 }
 
@@ -399,12 +416,12 @@ body, html {
 }
 
 a {
-    color: #2559a7;
+    color: #2166b1;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #2559a7;
+    color: #2166b1;
     text-decoration: none
 }
 
@@ -431,13 +448,13 @@ h4 {
 h5 {
     font-size: 1.125em;
     font-weight: bold;
-    color: #2559a7;
+    color: #2166b1;
 }
 
 h6 {
     font-size: 1.08em;
     font-weight: normal;
-    color: #2559a7;
+    color: #2166b1;
 }
 
 h7 {
@@ -572,6 +589,7 @@ h8 {
 }
 
 #content .row > h1 {
+    font-family: 'Abrade';
     font-size: 34px;
     line-height: 40px;
     font-weight: 200;
@@ -610,11 +628,18 @@ h8 {
 }
 
 #content .colset-2-its > p {
+    font-family: "Abrade";
     margin-top: 0;
     padding-bottom: 5px;
     text-align: center;
     color: #222;
-    font-size: 15px
+    font-size: 18px
+}
+
+.github-section {
+    text-align: center;
+    background-color: #FFF;
+    padding-bottom: 20px;
 }
 
 #content .colset-2-its .col1, #content .colset-2-its .col2 {
@@ -918,7 +943,7 @@ html, body, .st-container, .st-pusher, .st-content {
     visibility: hidden;
     width: 300px;
     height: 100%;
-    background: #2559a7;
+    background: #2166b1;
     -webkit-transition: all .5s;
     transition: all .5s;
     right: -600px

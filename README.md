@@ -1,52 +1,16 @@
 # Full Stack Developer Assignment
 
-## Focus Points
+## Resolution by Ridhwan Al-Debsi
 
-This assignment is designed to test the following:
+Starting with the main page at `/` you'll get a button that takes you to the github account page.
 
-- Ability to learn something new
-- Ability to read/understand documentation
-- Ability to see something through from start to finish
-- Front end skills
-- Back end skills
-- Source Code Management
-- Common sense
-- Quality of work
-- Code style
-- Understanding of code separation of concerns
-- URL structure
+The page can be accessed by either `/github` or by `/gitUser/getUser`.
 
-## Requirements
+You can then fill the form to get the user's information.
 
-- Git
-- Java 1.8
-- Grails 4.0.0
-- Get the project running, you can get help from the grails website
-- IntelliJ Community Edition (Optional, but recommended)
+You can also fill the form by `GET`, specifying the username field, or by accessing `/github/<username>`.
 
-## Task Overview
+You can also get a json response from the endpoint by `GET` with `Accept` type `application/json` on `/gitUser/getUser` or by accessing `/gitUser/getUser.json`
 
-We need a new page, with an input for the user to type in the name of a github account.
-Once submitted, the app should display:
 
-- The avatar image of the account
-- The location
-- The bio
-- The github ID
-- The number of public repos owned by that account
-
-## Expected Behaviour
-
-- The frontend should send the requested account name to the backend
-- The backend should check a local cache/database if we already have results for this account
-- If not, the backend will call the github api <https://api.github.com/users/user_name> (e.g. <https://api.github.com/users/facebook>), and store the results in a local cache/database.
-- The backend will return the results from the database to the frontend
-- The frontend will display the results accordingly
-
-## Instructions
-
-- Read up quickly on the basics of  the grails framework and groovy language
-- Fork this repository
-- Create the new feature on your fork
-- Raise a pull request once done
-- IMPORTANT - For the PR, use the naming convention `yourfirstname-yourlastname`
+*Note: Default port used which is 8080*
