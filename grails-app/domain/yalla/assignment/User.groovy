@@ -48,7 +48,7 @@ class User {
     String getPublicRepos() {
         return publicRepos
     }
-    void setPublicRpos(String publicRepos) {
+    void setPublicRepos(String publicRepos) {
         this.publicRepos = publicRepos
     }
 }
