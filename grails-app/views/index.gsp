@@ -61,11 +61,11 @@
         </p>
 
         <div id="controllers" role="navigation">
-            <h2>Available Controllers:</h2>
+            <h2>View Github user account details</h2>
             <ul>
                 <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
                     <li class="controller">
-                        <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
+                        <g:link controller="${c.logicalPropertyName}">Github User</g:link>
                     </li>
                 </g:each>
             </ul>
