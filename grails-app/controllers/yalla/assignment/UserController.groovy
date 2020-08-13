@@ -1,42 +1,44 @@
 package yalla.assignment
-
 import grails.converters.JSON
+import groovy.json.JsonOutput
 
 class UserController {
 
-    def userService
+    def UserService
 
-    def index() {
-
-    }
+    def index() { }
 
     def search() {
 
-        def user = userService.getByUserName(params.userName)
+            def user = UserService().getByUserName(params.userName)
 
-        if (user.is(null)){
-            def get = new URL("https://api.github.com/users/${params.userName}").openConnection()
-            if(get.getResponseCode() == 200) {
-                def jsonObj = JSON.parse(get.getInputStream().getText())
-                user = new User(
-                        userName:jsonObj.login,
-                        avatar_url:jsonObj.avatarUrl,
-                        location:jsonObj.location,
-                        bio:jsonObj.bio,
-                        gitId:jsonObj.id,
-                        public_repos:jsonObj.publicRepos)
+            if (user.is(null)){
 
+                def userInfo = new URL("https://api.github.com/users/${params.userName}").openConnection()
 
-                userService.save(user)
+                if(userInfo.getResponseCode() == 200) {
+                    def userJson = JSON.parse(userInfo.getInputStream().getText())
 
-                render (view: "user", model: [user: user])
+                    user = new User(
+                            userName:userJson.login,
+                            avatarUrl: userJson.avatar_url,
+                            location:userJson.location,
+                            bio:userJson.bio,
+                            gitId:userJson.id,
+                            publicRepos:userJson.public_repos)
+
+                    userService.save(user)
+
+                    render (view: "user", model: [user: user])
+                }
+                else{
+                    render "user doesn't exist."
+                }
             }
             else{
-                render "User doesn't exist"
+                render (view: "user", model: [user: user])
             }
+
         }
-        else{
-            render (view: "user", model: [user: user])
-        }
+
     }
-}

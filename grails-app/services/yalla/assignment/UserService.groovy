@@ -5,12 +5,14 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class UserService {
 
-    def serviceMethod() {
-
-    }
+    def serviceMethod() { }
 
     def get(id){
-        User.get(id)
+        user.get(id)
+    }
+
+    def list(){
+        user.list()
     }
 
     def save(user){
@@ -18,6 +20,7 @@ class UserService {
     }
 
     def getByUserName(userName){
-        User.findByUserName(userName)
+        user.findByUserName(userName)
     }
+
 }
