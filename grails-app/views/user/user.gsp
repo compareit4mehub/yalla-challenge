@@ -4,6 +4,7 @@
 	Date: 11/08/2020
 	Time: 14:22
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
@@ -20,7 +21,7 @@
 <br>
 <div class>
     <div class style="padding-left:100px"></div>
-    <g:img uri="$user.avatarUrl" id="avatar"  alt="Avatar Image"  width="200" height="200"/>
+    <g:img uri="$user.avatarUrl" id="avatar" class="img-fluid" alt="Avatar Image"  width="100" height="100"/>
 </div>
 <br>
 <div class>
@@ -32,7 +33,7 @@
 <br>
 <div class style="padding-left:100px">
     <label class=font-italic">LOGIN </label>
-    <span readonly="true" class="font-italic">${user.login}</span>
+    <span readonly="true" class="font-italic">${user.userName}</span>
 </div>
 <br>
 <div class style="padding-left:100px">
