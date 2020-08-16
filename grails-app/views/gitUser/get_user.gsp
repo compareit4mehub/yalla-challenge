@@ -60,7 +60,7 @@
         <label><b>ID:</b></label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" readonly value="${userid}">
+        <input type="text" readonly value="${userid}">
       </div>
     </div>
     <div class="row">
@@ -68,7 +68,7 @@
         <label><b>Public Repos:</b></label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" readonly value="${userrepos}">
+        <input type="text" readonly value="${userrepos}">
       </div>
     </div>
     <div class="row">
@@ -76,7 +76,7 @@
         <label><b>Location:</b></label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" readonly value="${userloc}">
+        <input type="text" readonly value="${userloc}">
       </div>
     </div>
     <div class="row">
@@ -84,7 +84,7 @@
         <label><b>Bio:</b></label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" style="height:200px" readonly>${userbio}</textarea>
+        <textarea style="height:200px" readonly>${userbio}</textarea>
       </div>
     </div>
 </div>
