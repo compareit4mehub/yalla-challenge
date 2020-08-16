@@ -62,15 +62,25 @@ display: table;
 clear: both;
 }
 
-#imgresult {
+.user-image {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 2%;
     border: 1px solid #2166b1;
     border-radius: 4px;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    width: 255px;
+    height: 255px;
+}
+
+#imgresult {
+    height: 255px;
   }
+
+.empty-image {
+    background-color: #d3e8ff;
+}
 
 .error-box {
 margin: auto;

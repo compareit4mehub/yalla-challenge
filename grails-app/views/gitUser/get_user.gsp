@@ -46,10 +46,11 @@
         <div class="col-75">
             <div style="width: 100%; height: 100%; display: block;">
                 <g:if test="${userimg}">
-                    <img src="${userimg}" id="imgresult" style="float: center !important;"/>
+                    <img src="${userimg}" id="imgresult" class="user-image"/>
                 </g:if>
                 <g:else>
-                    <img src="https://safetyaustraliagroup.com.au/wp-content/uploads/2019/05/image-not-found.png" id="imgresult"/>
+                    <div class="empty-image user-image">
+                    </div>
                 </g:else>
         </div>
     </div>
