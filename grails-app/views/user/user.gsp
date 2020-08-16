@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="main"/>
     <title>User Information</title>
 </head>
 <body>
@@ -16,39 +15,55 @@
 
 
 <div class>
-    <h1>Welcome to Github User Search</h1>
+    <h2 style="margin-left: 100px; margin-top: 40px; margin-bottom: 40px">Github User Search Result</h2>
 </div>
-<br>
 <div class>
-    <div class style="padding-left:100px"></div>
-    <g:img uri="$user.avatarUrl" id="avatar" class="img-fluid" alt="Avatar Image"  width="100" height="100"/>
+    <div class></div>
+    <g:img uri="$user.avatarUrl"
+           id="avatar"
+           class="img-fluid"
+           alt="Avatar Image"
+           width="150"
+           height="150"
+           style="border-radius:5px; padding: 4px; display: block; margin-left: 100px; background: #dddddd"
+    />
 </div>
 <br>
 <div class>
     <div class style="padding-left:100px">
-        <label class>GITHUB ID:</label>
-        <span class="font-italic">${user.gitId}</span>
+        <label class style="font-weight: bold;">GITHUB ID:</label>
+        <span class style="padding: 100px">${user.gitId}</span>
     </div>
 </div>
 <br>
 <div class style="padding-left:100px">
-    <label class=font-italic">LOGIN </label>
-    <span readonly="true" class="font-italic">${user.userName}</span>
+    <label class style="font-weight: bold;">LOGIN: </label>
+    <span readonly="true" style="padding: 135px">${user.userName}</span>
 </div>
 <br>
-<div class style="padding-left:100px">
-    <label class="font-italic">LOCATION: </label>
-    <span readonly="true">${user.location}</span>
+<div class style="padding-left:100px;">
+    <label class style="font-weight: bold;">LOCATION: </label>
+    <span readonly="true" style="margin-left: 100px">${user.location}</span>
 </div>
 <br>
-<div class>
-    <label class="font-italic" style="padding-left:100px">USER BIO:</label>
-    <g:textArea name="bio" readonly="true" value="${user.bio}" rows="3"/>
-</div>
-<br>
+
 <div style="padding-left:100px">
-    <label class="font-italic"># OF PUBLIC REPOS</label>
-    <span readonly="true">${user.publicRepos}
+    <label class style="font-weight: bold;">PUBLIC REPOS: </label>
+    <span readonly="true" style="margin-left: 65px"> ${user.publicRepos}</span>
 </div>
+<br>
+
+<div class style="padding-left: 100px">
+    <label class style="font-weight: bold; ">USER BIO:</label>
+    <g:textArea style="padding-top: 10px; padding-bottom: 10px; padding-right: 100px; padding-left: 100px;
+                       height: 200px; border: #dddddd"
+                 name="bio"
+                 readonly="true"
+                 value="${user.bio}"
+
+     />
+</div>
+
+
 </body>
 </html>

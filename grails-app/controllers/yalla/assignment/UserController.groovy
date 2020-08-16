@@ -20,11 +20,11 @@ class UserController {
                 def jsonObj = JSON.parse(get.getInputStream().getText())
                 user = new User(
                         userName:jsonObj.login,
-                        avatar_url:jsonObj.avatarUrl,
+                        avatarUrl:jsonObj.avatar_url,
                         location:jsonObj.location,
                         bio:jsonObj.bio,
                         gitId:jsonObj.id,
-                        public_repos:jsonObj.publicRepos)
+                        publicRepos:jsonObj.public_repos)
 
 
                 userService.save(user)
