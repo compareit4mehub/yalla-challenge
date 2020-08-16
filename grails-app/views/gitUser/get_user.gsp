@@ -12,45 +12,81 @@
         <h1>Github User Retreiver</h1>
     </section>
 </div>
-<form id="gituser-form" action="/github/">
-    <div>
-        <label for="gituser"><b>GitHub Username: </b></label>
-        <input type="text" placeholder="Enter Username" name="username" id="gituser" value="${username}" required>
-        <button type="submit" class="getuserbtn">Search</button>
-    </div>
-</form>
 
-<div id="gituser-results">
-    <ul>
-        <div style="width: 100%; height: 100%; display: block;">
-            <img src="${userimg}" id="imgresult"/>
+<div class="container">
+    <form id="gituser-form" action="/github/">
+        <div class="row">
+            <div class="col-25">
+                <label for="gituser"><b>GitHub Username: </b></label>
+            </div>
+            <div class="col-75">
+                <div class="col-75">
+                    <input type="text" placeholder="Enter Username" name="username" id="gituser" value="${username}" required>
+                </div>
+                <div class="col-25">
+                    <input type="submit" class="getuserbtn" value="Search"/>
+                </div>
+            </div>
         </div>
-    </ul>
-    <ul>
-        <label><b>Username: </b></label>
-        <input type="text" id="userresult" readonly class="readonly-button" value="${username}">
-        <label><b>ID: </b></label>
-        <input type="text" id="idresult" readonly class="readonly-button" value="${userid}">        
-    </ul>
-    <ul>
-        <label><b>Public Repos: </b></label>
-        <input type="text" id="reposresult" readonly class="readonly-button" value="${userrepos}">
-        <label><b>Location: </b></label>
-        <input type="text" id="locresult" readonly class="readonly-button" value="${userloc}">        
-    </ul>
-    <ul>
-        <label><b>Bio: </b></label>
-    </ul>
-    <ul>
-        <textarea type="text" id="biobox" readonly class="readonly-button">${userbio}</textarea>
-    </ul>
+    </form>
+    <g:if test="${error}">
+        <div class="row">
+            <div class="col-25">
+            </div>
+            <div class="col-75">
+                <div class="error-box">
+                    <p>ERROR: ${error}</p>
+                </div>
+            </div>
+        </div>
+    </g:if>
+    <div class="row">
+        <div class="col-25">
+        </div>
+        <div class="col-75">
+            <div style="width: 100%; height: 100%; display: block;">
+                <g:if test="${userimg}">
+                    <img src="${userimg}" id="imgresult" style="float: center !important;"/>
+                </g:if>
+                <g:else>
+                    <img src="https://safetyaustraliagroup.com.au/wp-content/uploads/2019/05/image-not-found.png" id="imgresult"/>
+                </g:else>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label><b>ID:</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" readonly value="${userid}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label><b>Public Repos:</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" readonly value="${userrepos}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label><b>Location:</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" readonly value="${userloc}">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label><b>Bio:</b></label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" style="height:200px" readonly>${userbio}</textarea>
+      </div>
+    </div>
 </div>
-
-<g:if test="${error}">
-<div class="error-box">
-    <p>ERROR: ${error}</p>
-</div>
-</g:if>
 
 </body>
 </html>
