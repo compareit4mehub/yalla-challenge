@@ -29,7 +29,7 @@
                     <g:form class="form-inline" name="form" controller="user" id="form">
                         <label style= "text-align: right; color: black" for="userName" class="col-sm-3 col-form-label">Enter user Name:</label>
                         <div class="form-group mx-sm-3 mb-2">
-                            <g:textField class="form-control" name="userName" id ="userName" value="${id}" title = "Enter Github UserName and it is a required field" placeholder="Enter Github UserName" onkeyup ="ValidateButton()" autocomplete="off" required = "true"/>
+                            <g:textField class="form-control" name="userName" id ="userName" value="${id}" title = "Enter Github UserName and it is a required field" placeholder="Enter Github UserName" onkeyup ="validateButton()" autocomplete="off" required = "true"/>
                         </div>
 
                         <g:actionSubmit class="btn btn-primary mb-2" id="searchButton" disabled = "true" value="Find Now" action="search"/>
@@ -54,7 +54,7 @@
             </div>
         <div>
         <script>
-            function ValidateButton(){
+            function validateButton(){
                 var inputText = document.getElementById("userName").value.trim(),
                     searchButton = document.getElementById("searchButton"),
                     regExpr = /^[a-zA-Z0-9](.*[a-zA-Z0-9])?$/,
@@ -73,7 +73,7 @@
                     errorBlock.style.display = "none";
                 }
             }
-            window.onload = ValidateButton;
+            window.onload = validateButton;
         </script>
     </body>
 </html>

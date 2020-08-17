@@ -21,7 +21,7 @@
             <div class="main">
                 <br/>
                 <h3 style = "background: #0088cc; color:white">User Details
-                    <i class="fa fa-minus-circle" aria-hidden="true" id= "minusIcon" onclick= "toggleMainBlock()" title = "click to hide information"></i>
+                    <i class="fa fa-minus-circle" aria-hidden="true" id= "minusIcon" onclick= "toggleMainBlock()" title = "click to hide or display information"></i>
                 </h3>
                 <div class="col-lg-11 col-lg-offset-1" id= "mainBlock">
                     <form>
