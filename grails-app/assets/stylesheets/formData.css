@@ -1,0 +1,65 @@
+.menu {
+    float:left;
+    width:20%;
+    padding:15px;
+}
+
+.header{
+    background-color:#333333;
+    padding:15px;
+    text-align: center
+}
+
+body{
+    color:#aaaaaa;
+    overflow:scroll
+}
+
+#gitlogo{
+    background-color:#e5e5e5;
+    overflow: scroll
+}
+.menu a {
+    background-color:#a6a6a6;
+    padding:8px;
+    margin-top:7px;
+    display:block;
+    width:100%;
+    cursor: hand;
+}
+
+a:hover{
+    color: red;
+}
+
+.main {
+    float:left;
+    width:60%;
+    padding:0 20px;
+}
+
+.right {
+    background-color:#a6a6a6;
+    float:left;
+    width:20%;
+    padding:15px;
+    margin-top:7px;
+}
+
+ul li {
+    color:black
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333333;
+}
+
+@media only screen and (max-width:600px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+    width:100%;
+}
