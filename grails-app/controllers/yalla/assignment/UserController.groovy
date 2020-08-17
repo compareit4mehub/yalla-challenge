@@ -11,7 +11,6 @@ class UserController {
     }
 
     def search() {
-
         def user = userService.getByUserName(params.userName)
 
         if (user.is(null)){
@@ -25,17 +24,13 @@ class UserController {
                         ,gitHubId:jsonObj.id
                         ,public_repos:jsonObj.public_repos)
 
-
                 userService.save(user)
-
-                render (view: "user", model: [user: user])
             }
             else{
-                render "User doesn't exist"
+                flash.message = 'User doesn\'t exist'
             }
         }
-        else{
-            render (view: "user", model: [user: user])
-        }
+
+        render (view: "index", model: [user: user])
     }
 }
