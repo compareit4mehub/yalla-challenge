@@ -10,6 +10,10 @@
     text-align: center
 }
 
+label{
+    color:black;
+}
+
 body{
     color:#aaaaaa;
     overflow:scroll
