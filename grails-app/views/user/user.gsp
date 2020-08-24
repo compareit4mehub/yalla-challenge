@@ -26,7 +26,7 @@
                 <div class="col-lg-11 col-lg-offset-1" id= "mainBlock">
                     <form>
                         <div class="form-group row">
-                            <label for="avatar" class="col-lg-6 col-form-label">User Name:</label>
+                            <label for="userName" class="col-lg-6 col-form-label">User Name:</label>
                             <div class="col-lg-6">
                                 <g:textField class="form-control" name="userName" disabled="true" value="${user.userName}"/>
                             </div>
