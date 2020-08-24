@@ -26,6 +26,12 @@
                 <div class="col-lg-11 col-lg-offset-1" id= "mainBlock">
                     <form>
                         <div class="form-group row">
+                            <label for="avatar" class="col-lg-6 col-form-label">User Name:</label>
+                            <div class="col-lg-6">
+                                <g:textField class="form-control" name="userName" disabled="true" value="${user.userName}"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label for="avatar" class="col-lg-6 col-form-label">Avatar image of the account:</label>
                             <div class="col-lg-6">
                                 <g:img uri="$user.userImg" id="avatar" class="img-fluid" alt="Avatar Image"  width="150" height="150"/>
