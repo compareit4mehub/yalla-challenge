@@ -33,15 +33,29 @@
                         </div>
                         <div class="form-group row">
                             <label for="location" class="col-lg-6 col-form-label">Location:</label>
-                            <div class="col-lg-6">
-                                <g:textField class="form-control" name="location" disabled="true" value="${user.location}"/>
-                            </div>
+                            <g:if test="${user.location == ""}">
+                                <div class="col-lg-6">
+                                    <g:textField class="form-control" name="location" disabled="true" style= "color: red" value="Not Available"/>
+                                </div>
+                            </g:if>
+                            <g:else>
+                                 <div class="col-lg-6">
+                                    <g:textField class="form-control" name="location" disabled="true" value="${user.location}"/>
+                                  </div>
+                            </g:else>
                         </div>
                         <div class="form-group row">
                             <label for="bio" class="col-lg-6 col-form-label">Bio:</label>
-                            <div class="col-lg-6">
-                                <g:textArea class="form-control" style= "overflow: scroll" name="bio" disabled="true" value="$user.bio" rows="1" />
-                            </div>
+                            <g:if test="${user.bio == ""}">
+                                <div class="col-lg-6">
+                                    <g:textArea class="form-control" style= "overflow: scroll" name="bio" disabled="true" style= "color:red" value="Not Available" rows="1" />
+                                </div>
+                            </g:if>
+                            <g:else>
+                                <div class="col-lg-6">
+                                    <g:textArea class="form-control" style= "overflow: scroll" name="bio" disabled="true" value="$user.bio" rows="1" />
+                                </div>
+                            </g:else>
                         </div>
                         <div class="form-group row">
                             <label for="githubId" class="col-lg-6 col-form-label">Github ID:</label>
