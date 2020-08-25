@@ -6,6 +6,7 @@
         <asset:javascript src='jquery-3.3.1.min.js'/>
         <title>User Info Page</title>
         <asset:stylesheet src="formData.css"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <div class="header">
@@ -23,7 +24,7 @@
                 <h3 style = "background: #0088cc; color:white">User Details
                     <i class="fa fa-minus-circle" aria-hidden="true" id= "minusIcon" onclick= "toggleMainBlock()" title = "click to hide or display information"></i>
                 </h3>
-                <div class="col-lg-11 col-lg-offset-1" id= "mainBlock">
+                <div class="col-lg-12" id= "mainBlock">
                     <form>
                         <div class="form-group row">
                             <label for="userName" class="col-lg-6 col-form-label">User Name:</label>

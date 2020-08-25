@@ -7,7 +7,7 @@
 .header{
     background-color:#333333;
     padding:15px;
-    text-align: center
+    text-align: center;
 }
 
 label{
@@ -16,12 +16,12 @@ label{
 
 body{
     color:#aaaaaa;
-    overflow:scroll
+    overflow:scroll;
 }
 
 #gitlogo{
     background-color:#e5e5e5;
-    overflow: scroll
+    overflow: scroll;
 }
 .menu a {
     background-color:#a6a6a6;
@@ -51,7 +51,7 @@ a:hover{
 }
 
 ul li {
-    color:black
+    color:black;
 }
 
 .footer {

@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Github Search Page</title>
         <asset:stylesheet src="formData.css"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <div class= "header">
@@ -14,7 +15,7 @@
         </div>
         <div class="svg" role="presentation" id= "gitlogo">
             <div class="grails-logo-container">
-                <img src="/assets/github.png" class="grails-logo"/>
+                <img src="/assets/github.png" width ="100%" height ="250" class="grails-logo"/>
             </div>
         </div>
         <div id="content" role="main" style="overflow:scroll">
