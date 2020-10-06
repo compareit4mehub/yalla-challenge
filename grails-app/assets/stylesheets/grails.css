@@ -44,7 +44,7 @@ pre {
 
 }
 .navbar-dark, .navbar-static-top {
-    background-color: #424649;
+    background-color: #4246490f;
     border: 0px;
 }
 a.navbar-brand {
@@ -85,7 +85,7 @@ a.navbar-brand {
     border-radius: 4px;
 }
 
-.nav .dropdown a.dropdown-toggle {
+.nav .dropdown a {
     padding-top: 25px;
     padding-bottom: 25px;
 }
