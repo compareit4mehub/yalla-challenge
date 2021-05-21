@@ -50,7 +50,6 @@ body{
     height : 40px;
     margin: 10 10px 0 10px;
     color: whitesmoke;
-    /* background:#6cf; */
 }
 footer{
     background-color: rgb(66, 70, 73);
@@ -98,9 +97,32 @@ footer{
     background-color: #f8f8f8;
     border: 1px solid #c6c6c6; */
     color: #222;
+    font-weight: bold;
+
 }
 
 #contact a{
     text-decoration:  none;
     color: inherit;
+}
+
+.header-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#222;
+}
+
+.header-row h1{
+    font-family: josefin sans,sans-serif;
+    color: #c9c9c9;
+    font-size: 80px;
+    letter-spacing: 10px;
+    margin: 0;
+    font-weight: 600;
+}
+.header-row h1 span{
+    color: #222;
+    text-shadow: 1px 1px 0 #c9c9c9,-1px -1px 0 #c9c9c9;
 }

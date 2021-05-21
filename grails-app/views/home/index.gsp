@@ -8,7 +8,7 @@
 <body>
 
 <div class="jumbotron header-row">
-    <h1 class="display-3">Yalla-Chalenge</h1>
+    <h1 class="display-3"><span>Yalla-</span>Chalenge</h1>
     <p class="lead">Github User info Retreiver</p>
     <hr>
     <a class="btn btn-primary btn-lg" id="btn-links" href="/searchUser/" role="button">Search</a>

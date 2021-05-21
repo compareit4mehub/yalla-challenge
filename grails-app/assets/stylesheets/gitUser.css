@@ -12,22 +12,10 @@ body{
     width: 100%;
     background-color: white;
 }
-.search-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #222;
-    /* border-bottom: 3px solid rgba(0, 0, 0, 0.493); */
-}
+
 .search-box h1{
-  font-family: josefin sans,sans-serif;
-  color: #222;
   font-size: 50px;
-  letter-spacing: 10px;
-  margin: 0;
   font-weight: 600;
-  text-shadow: 1px 2px 0 #c9c9c9,-1px -1px 0 #c9c9c9;
 }
 .input-box{
     width: inherit;
@@ -191,7 +179,7 @@ fieldset{
       padding: 0.5rem;
   }
 
-h1 span{
+.result h1 span{
       text-decoration: underline;
   }
 .btn_row{

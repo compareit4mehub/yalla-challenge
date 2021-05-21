@@ -7,8 +7,8 @@
 </head>
 <body>
 
-<div class="jumbotron search-box">
-    <h1 class="display-4">Retreive GitHub User Info.</h1>
+<div class="jumbotron search-box header-row">
+    <h1 class="display-4">Retreive <span>GitHub User</span> Info.</h1>
     <form class="inp" id="gituser-form" action="/searchUser/">
         <div class="input-box">
             <div class="search">
@@ -35,7 +35,8 @@
     <div class="result">
         <h1 class="display-4"><span>${username}</span> GitHub Account Info.</h1>
         <fieldset>
-            <legend><img src="${userimg}" class="account_img" alt="...">
+            <legend>
+                <g:img uri="${userimg}" onerror="this.onerror=null; this.dir='images' file='default_img.png';" class="account_img" alt="..."/>
             </legend>
             <h5 id="result_login">${userlogin}</h5>
             <p id="result_bio">${userbio}</p>

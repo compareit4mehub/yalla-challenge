@@ -10,8 +10,8 @@ class UrlMappings {
         }
 
         "/"(controller:"home")
-        "/searchUser"(controller:"gitUser")
-        "/searchUser/${username}"(controller:"gitUser")
+        "/searchUser"(controller:"gitUser", action:"getUser")
+        "/searchUser/${username}"(controller:"gitUser", action:"getUser")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
