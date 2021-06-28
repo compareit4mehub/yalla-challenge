@@ -7,7 +7,7 @@ Intentionally left the Repository details as the Requirement stated 'THE Number 
 Will be done in couple of minutes if asked though.
 Just for reference, following API endpoint would be used for this.
 
-https://api.github.com/users/targetUser/repos
+"https://api.github.com/users/targetUser/repos"
 
 
 
