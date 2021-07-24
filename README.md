@@ -6,7 +6,7 @@ Application is built using Grails, a MVC framework for Groovy, a JVM based langu
 
 It is a part of Full Stack developer challenge by Yalla Compare, UAE's leading insurance comparing company. 
 
-###To use:
+##To use:
 
 Enter a Github Username and hit submit.
 
