@@ -1,20 +1,16 @@
-# Full Stack Developer Assignment
+# Full Stack Developer Challenge
 
 
 ## COMPLETED AS PER REQUIREMENTS
-After submitting an account name, it is first searched in Database.
+Application is built using Grails, a MVC framework for Groovy, a JVM based language.
 
-If there is no data available for that user, then data is obtained by github API.
+It is a part of Full Stack developer challenge by Yalla Compare, UAE's leading insurance comparing company. 
 
-Intentionally left the Repository details as the Requirement stated 'THE Number of Public Repos', nothing was mentioned about getting details as well. 
-
-So I assumed it is not necessary to make another API Call for this purpose.
-
-Will be done in couple of minutes if asked though.
-
-Just for reference, following API endpoint would be used for this.
-
-"https://api.github.com/users/targetUser/repos"
-
+To use:
+Enter a Github Username and hit submit
+User data is first looked up in local cache/database. If it exists, then we'll simply render the data to frontend.
+If nothing was found, the app consumes the Github API to fetch user data. Data is trimmed and required fields are saved in local database.
+Then this data is rendered on frontend.
+Data includes Github ID, Username, Profile Photo, Location and number of public Repositories.
 
 
